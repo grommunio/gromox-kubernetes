@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: gromox-core
-        image: olam1k0/gromox-core:0.0.7
+        image: olam1k0/gromox-core:0.0.1
+        imagePullPolicy: Always
         envFrom:
         - configMapRef:
             name: db-config
