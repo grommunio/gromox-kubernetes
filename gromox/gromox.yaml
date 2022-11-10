@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: gromox-core
-        image: olam1k0/gromox-core:0.0.1
+        image: olam1k0/gromox-core:v0.0.1
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
@@ -32,8 +32,6 @@ spec:
           mountPath: /home/plugins
         - name: admin-links-volume
           mountPath: /home/links 
-        - name: chat-setup-volume
-          mountPath: /home/chat
       volumes:
       - name: ssl-volume
         secret:
@@ -45,10 +43,6 @@ spec:
       - name: admin-links-volume
         configMap:
           name: admin-links-config
-          defaultMode: 0777
-      - name: chat-setup-volume
-        configMap:
-          name: chat-setup-config
           defaultMode: 0777
       - name: gromox-services-volume
         configMap:
