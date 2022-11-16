@@ -20,11 +20,8 @@ helm install \
   --set installCRDs=true \
   --create-namespace
 
-helm repo add jetstack https://charts.jetstack.io
-sleep 30s
 
 kubectl apply -f db/db-config.yaml
-kubectl apply -f admin-config.yaml
 kubectl apply -f admin-api/admin-plugins-config.yaml
 kubectl apply -f admin-api/admin-links-config.yaml
 kubectl apply -f redis/redis-config.yaml
@@ -35,6 +32,5 @@ kubectl apply -f general/general-config.yaml
 kubectl apply -f general/gromox-services-config.yaml
 sleep 60s
 kubectl apply -f db/init-db.yaml
-sleep 90s
-kubectl apply -f gromox/gromox.yaml
 sleep 60s
+kubectl apply -f gromox/gromox.yaml

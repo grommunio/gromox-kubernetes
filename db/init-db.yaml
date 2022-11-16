@@ -12,8 +12,8 @@ spec:
     spec:
       containers:
       - name: init-mydb
-        image: olam1k0/gromox-suse:latest
-        command: ['sh', '-c', "/scripts/db.sh && gromox-dbop -C"]
+        image: olam1k0/gromox-core:v0.0.1
+        command: ['sh', '-c', "gromox-dbop -C"]
         envFrom:
         - configMapRef:
             name: db-config
