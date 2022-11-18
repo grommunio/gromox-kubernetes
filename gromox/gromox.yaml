@@ -32,6 +32,8 @@ spec:
           mountPath: /home/plugins
         - name: admin-links-volume
           mountPath: /home/links 
+        - name: nginx-volume
+          mountPath: /home/nginx
       volumes:
       - name: ssl-volume
         secret:
@@ -47,6 +49,9 @@ spec:
       - name: gromox-services-volume
         configMap:
           name: gromox-services-config
+      - name: nginx-volume
+        configMap:
+          name: nginx-config
 ---
 apiVersion: v1
 kind: Service
