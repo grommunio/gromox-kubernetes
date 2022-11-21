@@ -29,6 +29,7 @@ kubectl apply -f redis/redis.yaml
 kubectl apply -f db/db.yaml
 kubectl apply -f certificates/test-certificate.yaml
 kubectl apply -f general/general-config.yaml
+kubectl apply -f general/nginx-config.yaml
 kubectl apply -f general/gromox-services-config.yaml
 sleep 60s
 kubectl apply -f db/init-db.yaml
