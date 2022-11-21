@@ -13,9 +13,10 @@ spec:
       containers:
       - name: init-mydb
         image: olam1k0/gromox-core:v0.0.1
+        imagePullPolicy: Always
         command: ['sh', '-c', "gromox-dbop -C"]
         envFrom:
         - configMapRef:
             name: db-config
       restartPolicy: Never
-  backoffLimit: 4
+  backoffLimit: 6

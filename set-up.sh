@@ -8,17 +8,17 @@ helm repo add jetstack https://charts.jetstack.io
 helm repo update
 
 # Setup Grommunio Jitsi
-helm install \
-	gromox-meet jitsi/jitsi-meet \
-	-f video/video-values.yml
+#helm install \
+#	gromox-meet jitsi/jitsi-meet \
+#	-f video/video-values.yml
 
 # Setup cert-manager
-helm install \
-  cert-manager jetstack/cert-manager \
-  --namespace cert-manager \
-  --version v1.10.0 \
-  --set installCRDs=true \
-  --create-namespace
+#helm install \
+#  cert-manager jetstack/cert-manager \
+#  --namespace cert-manager \
+#  --version v1.10.0 \
+#  --set installCRDs=true \
+#  --create-namespace
 
 
 kubectl apply -f db/db-config.yaml
@@ -31,7 +31,5 @@ kubectl apply -f certificates/test-certificate.yaml
 kubectl apply -f general/general-config.yaml
 kubectl apply -f general/nginx-config.yaml
 kubectl apply -f general/gromox-services-config.yaml
-sleep 60s
-kubectl apply -f db/init-db.yaml
 sleep 60s
 kubectl apply -f gromox/gromox.yaml
