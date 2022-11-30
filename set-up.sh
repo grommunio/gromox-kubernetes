@@ -13,12 +13,12 @@ helm repo update
 #	-f video/video-values.yml
 
 # Setup cert-manager
-#helm install \
-#  cert-manager jetstack/cert-manager \
-#  --namespace cert-manager \
-#  --version v1.10.0 \
-#  --set installCRDs=true \
-#  --create-namespace
+helm install \
+  cert-manager jetstack/cert-manager \
+  --namespace cert-manager \
+  --version v1.10.0 \
+  --set installCRDs=true \
+  --create-namespace
 
 
 kubectl apply -f db/db-config.yaml
