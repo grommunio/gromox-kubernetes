@@ -7,6 +7,9 @@ data:
     sync:
       connection:
         host: redis-service
+    options:
+        antispamUrl: http://localhost:11334
+
   chat-conf.sh: |
     cat > /etc/grommunio-admin-api/conf.d/chat.yaml <<EOCHAT
     chat:
