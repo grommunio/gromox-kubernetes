@@ -5,5 +5,3 @@ metadata:
 data:
   FQDN: grammm.net
   ADMIN_PASS: admin_pass
-  CHAT_ADMIN_PASS: admin_pass
-  CHAT_ADMIN_USER: admin
