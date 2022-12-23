@@ -1,7 +1,8 @@
 # Setting up Gromox k8s Cluster
 
   The instructions for setting up Gromox on a k8s cluster. 
-  **Note: this is not secure nor highly available and should not be used in production environments. It is for testing purposes**
+
+  **Note: This K8 setup requires adaption for professional deployments at scale. This repository provides basic recipes which require adaption based on your setup type, for example geo-redundant setups, usage of existing database service containers or alike.**
 
 * Set up a k8s cluster. You can install [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation) or [Minikube](https://minikube.sigs.k8s.io/docs/start/)
   * This setup was tested using [Kind](https://kind.sigs.k8s.io/docs/user/quick-start/#installation)
